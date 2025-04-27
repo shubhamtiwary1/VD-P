@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thrust Beverages - Premium Personalized Water Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #00AEEF;
+      --secondary-color: #FFFFFF;
+      --accent-color: #003366;
+      --text-color: #333333;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: var(--text-color);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+    }
+    
+    a {
+      text-decoration: none;
+      color: var(--primary-color);
+      transition: all 0.3s ease;
+    }
+    
+    a:hover {
+      color: var(--accent-color);
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    
+    .btn {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
+      padding: 0.75rem 1.5rem;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .btn:hover {
+      background-color: var(--accent-color);
+      color: var(--secondary-color);
+    }
+    
+    /* Water Background Effect */
+    .water-bg {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    /* Header */
+    header {
+      background-color: var(--secondary-color);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+    }
+    
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+    
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--accent-color);
+    }
+    
+    .logo span {
+      color: var(--primary-color);
+    }
+    
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+    
+    nav ul li {
+      margin-left: 1.5rem;
+    }
+    
+    nav ul li a {
+      color: var(--accent-color);
+      font-weight: 600;
+    }
+    
+    nav ul li a:hover {
+      color: var(--primary-color);
+    }
+    
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), url('/api/placeholder/1200/600') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      color: var(--secondary-color);
+      text-align: center;
+      padding-top: 80px;
+      position: relative;
+    }
+    
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 5;
+    }
+    
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: var(--secondary-color);
+    }
+    
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+    }
+    
+    /* Services */
+    .services {
+      padding: 5rem 0;
+      background-color: #f9f9f9;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .service-card {
+      background: var(--secondary-color);
+      border-radius: 8px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-10px);
+    }
+    
+    .service-icon {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+    
+    /* Products */
+    .products {
+      padding: 5rem 0;
+      position: relative;
+    }
+    
+    .product-showcase {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      margin-top: 2rem;
+    }
+    
+    .product-image {
+      flex: 1;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    
+    .product-image img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    
+    .product-info {
+      flex: 1;
+    }
+    
+    .features-list {
+      margin: 1.5rem 0;
+    }
+    
+    .features-list li {
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+    }
+    
+    .features-list li i {
+      color: var(--primary-color);
+      margin-right: 0.5rem;
+    }
+    
+    /* Success Stories */
+    .success-stories {
+      padding: 5rem 0;
+      background-color: #f9f9f9;
+    }
+    
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .testimonial {
+      background: var(--secondary-color);
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .testimonial-content {
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+    
+    .client-info {
+      display: flex;
+      align-items: center;
+    }
+    
+    .client-image {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 1rem;
+    }
+    
+    .client-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .client-details h4 {
+      margin-bottom: 0.25rem;
+    }
+    
+    /* About Us */
+    .about {
+      padding: 5rem 0;
+    }
+    
+    .about-content {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+    }
+    
+    .about-image {
+      flex: 1;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    
+    .about-image img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    
+    .about-text {
+      flex: 1;
+    }
+    
+    /* Blog */
+    .blog {
+      padding: 5rem 0;
+      background-color: #f9f9f9;
+    }
+    
+    .blog-posts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .blog-post {
+      background: var(--secondary-color);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .blog-image {
+      height: 200px;
+      overflow: hidden;
+    }
+    
+    .blog-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .blog-content {
+      padding: 1.5rem;
+    }
+    
+    .blog-date {
+      color: #777;
+      font-size: 0.875rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    /* Contact CTA */
+    .contact-cta {
+      padding: 5rem 0;
+      background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+      color: var(--secondary-color);
+      text-align: center;
+      position: relative;
+    }
+    
+    .contact-cta h2 {
+      color: var(--secondary-color);
+    }
+    
+    .contact-cta .btn {
+      background-color: var(--secondary-color);
+      color: var(--accent-color);
+      margin-top: 1.5rem;
+    }
+    
+    .contact-cta .btn:hover {
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+    
+    /* Footer */
+    footer {
+      background-color: var(--accent-color);
+      color: var(--secondary-color);
+      padding: 3rem 0 1rem;
+    }
+    
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    
+    .footer-logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    
+    .footer-links h3 {
+      color: var(--secondary-color);
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    
+    .footer-links ul {
+      list-style: none;
+    }
+    
+    .footer-links ul li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .footer-links ul li a {
+      color: rgba(255, 255, 255, 0.8);
+    }
+    
+    .footer-links ul li a:hover {
+      color: var(--primary-color);
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: var(--secondary-color);
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+    
+    .social-links a:hover {
+      background-color: var(--primary-color);
+    }
+    
+    .footer-bottom {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    /* WhatsApp Float Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #25D366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .whatsapp-tooltip {
+      position: absolute;
+      right: 70px;
+      background-color: white;
+      color: var(--text-color);
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+      white-space: nowrap;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    .whatsapp-float:hover .whatsapp-tooltip {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    /* Responsive */
+    @media (max-width: 992px) {
+      .product-showcase,
+      .about-content {
+        flex-direction: column;
+        gap: 2rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      nav ul {
+        margin-top: 1rem;
+      }
+      
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="#" class="logo">Thrust<span>Beverages</span></a>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Success Stories</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <a href="#" class="btn">Get a Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero water-bg">
+    <div class="container">
+      <div class="hero-content">
+        <h1 data-aos="fade-down" data-aos-delay="100">Serve Your Brand with Every Sip</h1>
+        <p data-aos="fade-up" data-aos-delay="200">Personalized Water Bottles at No Extra Cost for Hotels, Restaurants, and Resorts</p>
+        <a href="#" class="btn" data-aos="fade-up" data-aos-delay="300">Explore Our Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-aos="fade-up">Our Premium Services</h2>
+        <p data-aos="fade-up" data-aos-delay="100">Elevate your guest experience with customized hydration solutions</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-icon">
+            <i class="fas fa-paint-brush"></i>
+          </div>
+          <h3>Custom Branding</h3>
+          <p>Showcase your logo and brand identity on every bottle, creating a memorable impression with each guest.</p>
+          <a href="#">Learn More</a>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-icon">
+            <i class="fas fa-dollar-sign"></i>
+          </div>
+          <h3>Cost-Free Solutions</h3>
+          <p>Enhance your guest experience with premium personalized water bottles at no additional cost to your business.</p>
+          <a href="#">Learn More</a>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-icon">
+            <i class="fas fa-truck"></i>
+          </div>
+          <h3>Reliable Delivery</h3>
+          <p>Count on our dependable supply chain to ensure you never run out of your custom-branded water products.</p>
+          <a href="#">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products water-bg" id="products">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-aos="fade-up">Our Premium Brand</h2>
+        <p data-aos="fade-up" data-aos-delay="100">Introducing Pacific - Pure hydration with exceptional quality</p>
+      </div>
+      <div class="product-showcase">
+        <div class="product-image" data-aos="fade-right" data-aos-delay="100">
+          <img src="/api/placeholder/600/400" alt="Pacific Water Bottles">
+        </div>
+        <div class="product-info" data-aos="fade-left" data-aos-delay="200">
+          <h3>Pacific Premium Water</h3>
+          <p>Our flagship brand delivers pure, refreshing hydration in elegantly designed bottles that complement your establishment's aesthetic.</p>
+          <ul class="features-list">
+            <li><i class="fas fa-check-circle"></i> Sourced from pristine natural springs</li>
+            <li><i class="fas fa-check-circle"></i> Available in still and sparkling varieties</li>
+            <li><i class="fas fa-check-circle"></i> Eco-friendly packaging options</li>
+            <li><i class="fas fa-check-circle"></i> Multiple sizes to suit every need</li>
+            <li><i class="fas fa-check-circle"></i> Crystal-clear taste profile</li>
+          </ul>
+          <a href="#" class="btn">View Product Details</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Success Stories Section -->
+  <section class="success-stories" id="success-stories">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-aos="fade-up">Success Stories</h2>
+        <p data-aos="fade-up" data-aos-delay="100">See how our partners elevate their brand with Thrust Beverages</p>
+      </div>
+      <div class="testimonials">
+        <div class="testimonial" data-aos="fade-up" data-aos-delay="100">
+          <div class="testimonial-content">
+            <p>"Thrust Beverages transformed our guest experience. The personalized water bottles have become a signature touch that guests regularly compliment."</p>
+          </div>
+          <div class="client-info">
+            <div class="client-image">
+              <img src="/api/placeholder/100/100" alt="Client">
+            </div>
+            <div class="client-details">
+              <h4>Sarah Johnson</h4>
+              <p>Ocean View Resort</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial" data-aos="fade-up" data-aos-delay="200">
+          <div class="testimonial-content">
+            <p>"We've seen a 30% increase in customer satisfaction scores since partnering with Thrust Beverages. Their Pacific water is exceptional, and the branding is perfect."</p>
+          </div>
+          <div class="client-info">
+            <div class="client-image">
+              <img src="/api/placeholder/100/100" alt="Client">
+            </div>
+            <div class="client-details">
+              <h4>Michael Chen</h4>
+              <p>Sapphire Fine Dining</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial" data-aos="fade-up" data-aos-delay="300">
+          <div class="testimonial-content">
+            <p>"The no-cost model seemed too good to be true, but Thrust Beverages delivered exactly as promised. Our branded bottles are now a marketing asset."</p>
+          </div>
+          <div class="client-info">
+            <div class="client-image">
+              <img src="/api/placeholder/100/100" alt="Client">
+            </div>
+            <div class="client-details">
+              <h4>Emma Rodriguez</h4>
+              <p>Boutique Hotel Group</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-aos="fade-up">Our Journey to Premium Hydration</h2>
+      </div>
+      <div class="about-content">
+        <div class="about-image" data-aos="fade-right" data-aos-delay="100">
+          <img src="/api/placeholder/600/400" alt="About Thrust Beverages">
+        </div>
+        <div class="about-text" data-aos="fade-left" data-aos-delay="200">
+          <p>Founded with a vision to revolutionize the hospitality beverage experience, Thrust Beverages has grown into a trusted partner for premium establishments across the country.</p>
+          <p>Our mission is simple: provide exceptional quality water products that enhance your brand while adding zero cost to your bottom line.</p>
+          <p>With decades of combined experience in the beverage and hospitality industries, our team understands the importance of quality, reliability, and presentation in creating memorable guest experiences.</p>
+          <a href="#" class="btn">Learn More About Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section class="blog" id="blog">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-aos="fade-up">Latest Insights</h2>
+        <p data-aos="fade-up" data-aos-delay="100">Industry trends, tips, and success stories</p>
+      </div>
+      <div class="blog-posts">
+        <div class="blog-post" data-aos="fade-up" data-aos-delay="100">
+          <div class="blog-image">
+            <img src="/api/placeholder/400/300" alt="Blog Post">
+          </div>
+          <div class="blog-content">
+            <div class="blog-date">April 15, 2025</div>
+            <h3>5 Ways Custom Water Bottles Enhance Guest Experience</h3>
+            <p>Discover how personalized hydration can create lasting impressions and boost guest satisfaction scores.</p>
+            <a href="#">Read More</a>
+          </div>
+        </div>
+        <div class="blog-post" data-aos="fade-up" data-aos-delay="200">
+          <div class="blog-image">
+            <img src="/api/placeholder/400/300" alt="Blog Post">
+          </div>
+          <div class="blog-content">
+            <div class="blog-date">April 3, 2025</div>
+            <h3>Sustainability in Hospitality: The Water Bottle Revolution</h3>
+            <p>How eco-friendly water solutions are changing the hospitality landscape and reducing environmental impact.</p>
+            <a href="#">Read More</a>
+          </div>
+        </div>
+        <div class="blog-post" data-aos="fade-up" data-aos-delay="300">
+          <div class="blog-image">
+            <img src="/api/placeholder/400/300" alt="Blog Post">
+          </div>
+          <div class="blog-content">
+            <div class="blog-date">March 22, 2025</div>
+            <h3>The ROI of Branded Water: A Case Study</h3>
+            <p>A detailed analysis of how custom water bottles delivered 3x ROI through brand recognition and guest loyalty.</p>
+            <a href="#">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA Section -->
+  <section class="contact-cta water-bg">
+    <div class="container">
+      <h2 data-aos="fade-up">Ready to Personalize Your Water?</h2>
+      <p data-aos="fade-up" data-aos-delay="100">Elevate your guest experience with custom-branded premium water bottles at no cost.</p>
+      <a href="#" class="btn" data-aos="fade-up" data-aos-delay="200">Get a Free Consultation</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <div class="footer-logo">Thrust<span>Beverages</span></div>
+          <p>Premium personalized water solutions for the hospitality industry.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Success Stories</a></li>
+            <li><a href="#">About Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="#">Custom Branding</a></li>
+            <li><a href="#">Delivery Options</a></li>
+            <li><a href="#">Hospitality Solutions</a></li>
+            <li><a href="#">Event Services</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="#"><i class="fas fa-map-marker-alt"></i> 123 Water Way, Suite 500</a></li>
+            <li><a href="#"><i class="fas fa-phone"></i> (555) 123-4567</a></li>
+            <li><a href="#"><i class="fas fa-envelope"></i> info@thrustbeverages.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Thrust Beverages. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float Button -->
+  <a href="#" class="whatsapp-float">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">Chat with us</span>
+  </a>
+
+  <script>
+    // Initialize AOS (Animate on Scroll)
+    document.addEventListener('DOMContentLoaded', function() {
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true
+      });
+      
+      // Initialize water ripple effect on sections with water-bg class
+      $(document).ready(function() {
+        $('.water-bg').ripples({
+          resolution: 512,
+          dropRadius: 20,
+          perturbance: 0.04
+        });
+        
+        // Create some random ripples on water background sections
+        setInterval(function() {
+          var $waterBg = $('.water-bg');
+          var x = Math.random() * $waterBg.width();
+          var y = Math.random() * $waterBg.height();
+          var dropRadius = 20;
+          var strength = 0.04 + Math.random() * 0.04;
+          
+          $waterBg.ripples('drop', x, y, dropRadius, strength);
+        }, 3000);
+      });
+    });
+  </script>
+</body>
+</html>
