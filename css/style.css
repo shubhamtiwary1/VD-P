@@ -29,6 +29,7 @@
     border-radius: 50%;
     width: 50px;
   }
+
   a {
     text-decoration: none;
     color: var(--primary-color);
@@ -49,7 +50,7 @@
   #btn{
     margin-top: 5px;
   }
-  
+
   .btn {
     display: inline-block;
     background-color: var(--primary-color);
@@ -90,10 +91,9 @@
     padding: 1rem 0;
   }
   
-  .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--accent-color);
+  .logoH {
+    width: 50px;
+    border-radius: 50px;
   }
   
   .logo span {
