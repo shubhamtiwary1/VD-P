@@ -25,6 +25,10 @@
     margin-bottom: 1rem;
   }
   
+  .logo{
+    border-radius: 50%;
+    width: 50px;
+  }
   a {
     text-decoration: none;
     color: var(--primary-color);
@@ -40,6 +44,10 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
+  }
+  
+  #btn{
+    margin-top: 5px;
   }
   
   .btn {
