@@ -54,7 +54,7 @@ header .cta-button {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: url('../image/heroSec/about-usHero.jpg') no-repeat center center/cover;
+    background: url('../image/heroSec/about-us-hero.jpg') no-repeat center center/cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
