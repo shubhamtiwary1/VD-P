@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Thrust Beverages</title>
+    <link rel="stylesheet" href="../css/blog.css" />
+</head>
+<body>
+    <header>
+        <img src="https://placehold.co/150x50" alt="Thrust Beverages Logo">
+        <nav>
+            <ul id="main-nav">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="partner.html">Success Stories</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+            </ul>
+        </nav>
+        <a href="../contact.html" class="cta-button">Get a Quote</a>
+        <button class="menu-toggle">☰</button>
+    </header>
+
+    <section class="hero">
+        <h1>Insights from Thrust Beverages</h1>
+        <p>Explore Tips and Trends for Hospitality Branding</p>
+    </section>
+
+    <section class="blog-posts-overview">
+        <h2>Latest Blog Posts</h2>
+        <div class="grid">
+            <div class="post-card">
+                <img src="https://placehold.co/600x400" alt="Personalized Water Bottles">
+                <h3>5 Ways Personalized Water Bottles Can Boost Your Brand</h3>
+                <p class="date">October 10, 2023</p>
+                <p>In this article, we explore how customized water bottles can elevate your brand presence and create a memorable experience for your guests.</p>
+                <a href="post-1.html">Read More</a>
+            </div>
+            <div class="post-card">
+                <img src="https://placehold.co/600x400" alt="Sustainable Packaging">
+                <h3>The Importance of Sustainable Packaging in Hospitality</h3>
+                <p class="date">October 5, 2023</p>
+                <p>Learn why eco-friendly packaging is crucial for the hospitality industry and how Thrust Beverages is leading the way.</p>
+                <a href="post-2.html">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Ready to Elevate Your Brand?</h2>
+        <p>Contact us today to start personalizing your water bottles.</p>
+        <a href="../contact.html" class="cta-button">Get in Touch</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Thrust Beverages. All rights reserved.</p>
+        <ul>
+            <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="../terms-of-service.html">Terms of Service</a></li>
+        </ul>
+        <div class="social-media">
+            <a href="#"><img src="https://placehold.co/20x20" alt="Facebook"></a>
+            <a href="#"><img src="https://placehold.co/20x20" alt="Twitter"></a>
+            <a href="#"><img src="https://placehold.co/20x20" alt="Instagram"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="partner.html">Success Stories</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mainNav = document.getElementById('main-nav');
+
+        menuToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

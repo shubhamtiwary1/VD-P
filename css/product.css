@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+}
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+header img {
+    height: 50px;
+}
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+header nav ul li {
+    margin: 0 15px;
+}
+header nav ul li a {
+    text-decoration: none;
+    color: #007BFF;
+}
+header .cta-button {
+    background: #28A745;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('../image/heroSec/productHero.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+.hero p {
+    font-size: 1.5em;
+}
+/* Product Showcase */
+.product-showcase {
+    padding: 50px 0;
+    text-align: center;
+}
+.product-showcase .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.product-showcase .product-card {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+}
+.product-showcase .product-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+.product-showcase .product-card h3 {
+    margin-bottom: 10px;
+}
+.product-showcase .product-card ul {
+    list-style: none;
+    padding: 0;
+}
+.product-showcase .product-card ul li {
+    margin-bottom: 5px;
+}
+/* Why Pacific */
+.why-pacific {
+    padding: 50px 0;
+    text-align: center;
+}
+.why-pacific .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.why-pacific .usp {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+}
+.why-pacific .usp img {
+    height: 50px;
+    margin-bottom: 10px;
+}
+/* Customization Tie-In */
+.customization-tie-in {
+    padding: 50px 0;
+    text-align: center;
+    background: #f9f9f9;
+}
+.customization-tie-in h2 {
+    margin-bottom: 10px;
+}
+.customization-tie-in p {
+    margin-bottom: 20px;
+}
+.customization-tie-in .cta-button {
+    background: #28A745;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+/* CTA Section */
+.cta-section {
+    padding: 50px 0;
+    text-align: center;
+    background: #007BFF;
+    color: #fff;
+}
+.cta-section .cta-button {
+    background: #28A745;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+footer ul li {
+    margin: 0 10px;
+}
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+footer .social-media img {
+    height: 20px;
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        padding: 10px 0;
+    }
+    header nav ul.active {
+        display: flex;
+    }
+    .product-showcase .grid,
+    .why-pacific .grid {
+        grid-template-columns: 1fr;
+    }
+}

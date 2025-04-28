@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+header img {
+    height: 50px;
+}
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+header nav ul li {
+    margin: 0 15px;
+}
+header nav ul li a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: 500;
+}
+header .cta-button {
+    background: #28A745;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('../image/heroSec/about-usHero.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+.hero p {
+    font-size: 1.5em;
+}
+/* Company Story */
+.company-story {
+    padding: 50px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.company-story h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+.company-story p {
+    margin-bottom: 20px;
+}
+.company-story img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+/* Mission and Values */
+.mission-values {
+    padding: 50px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+.mission-values h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+.mission-values .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.mission-values .value-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.mission-values .value-card img {
+    height: 50px;
+    margin-bottom: 10px;
+}
+.mission-values .value-card h3 {
+    margin-bottom: 10px;
+}
+/* Team Overview */
+.team-overview {
+    padding: 50px 20px;
+    text-align: center;
+}
+.team-overview h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+.team-overview .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.team-overview .team-card {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+}
+.team-overview .team-card img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.team-overview .team-card h3 {
+    margin-bottom: 5px;
+}
+.team-overview .team-card p.role {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 10px;
+}
+/* CTA Section */
+.cta-section {
+    padding: 50px 20px;
+    text-align: center;
+    background: #007BFF;
+    color: #fff;
+}
+.cta-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.cta-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+.cta-section .cta-button {
+    background: #28A745;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+footer ul li {
+    margin: 0 10px;
+}
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+footer .social-media img {
+    height: 20px;
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        padding: 10px 0;
+    }
+    header nav ul.active {
+        display: flex;
+    }
+    .mission-values .grid,
+    .team-overview .grid {
+        grid-template-columns: 1fr;
+    }
+    .hero h1 {
+        font-size: 2em;
+    }
+    .hero p {
+        font-size: 1.2em;
+    }
+}

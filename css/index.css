@@ -1,4 +1,4 @@
-:root {
+  :root {
     --primary-color: #00AEEF;
     --secondary-color: #FFFFFF;
     --accent-color: #003366;
@@ -75,6 +75,9 @@
     overflow: hidden;
   }
   
+
+
+
   /* Header */
   header {
     background-color: var(--secondary-color);
@@ -90,11 +93,6 @@
     align-items: center;
     padding: 1rem 0;
   }
-  
-  /* .logoH {
-    width: 50px;
-    border-radius: 50px;
-  } */
   
   .logo {
     font-size: 1.5rem;
@@ -131,6 +129,9 @@
     color: var(--primary-color);
   }
   
+
+
+
   /* Hero Section */
   .hero {
     background: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), url('/api/placeholder/1200/600') center/cover no-repeat;
@@ -161,6 +162,9 @@
     margin-bottom: 2rem;
   }
   
+
+
+
   /* Services */
   .services {
     padding: 5rem 0;
@@ -197,6 +201,9 @@
     margin-bottom: 1rem;
   }
   
+
+
+
   /* Products */
   .products {
     padding: 5rem 0;
@@ -244,6 +251,9 @@
     margin-right: 0.5rem;
   }
   
+
+
+
   /* Success Stories */
   .success-stories {
     padding: 5rem 0;
@@ -292,6 +302,10 @@
     margin-bottom: 0.25rem;
   }
   
+
+
+
+
   /* About Us */
   .about {
     padding: 5rem 0;
@@ -319,6 +333,9 @@
     flex: 1;
   }
   
+
+
+
   /* Blog */
   .blog {
     padding: 5rem 0;
@@ -359,6 +376,9 @@
     font-size: 0.875rem;
     margin-bottom: 0.5rem;
   }
+
+
+
   
   /* Contact CTA */
   .contact-cta {
@@ -383,6 +403,9 @@
     background-color: rgba(255, 255, 255, 0.9);
   }
   
+
+
+
   /* Footer */
   footer {
     background-color: var(--accent-color);
@@ -453,6 +476,9 @@
     border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
   
+
+
+
   /* WhatsApp Float Button */
   .whatsapp-float {
     position: fixed;
@@ -498,6 +524,9 @@
     visibility: visible;
   }
   
+
+
+
   /* Responsive */
   @media (max-width: 992px) {
     .product-showcase,

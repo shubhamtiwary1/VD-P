@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Stories - Thrust Beverages</title>
+    <link rel="stylesheet" href="../css/partner.css" />
+</head>
+<body>
+    <header>
+        <img src="https://placehold.co/150x50" alt="Thrust Beverages Logo">
+        <nav>
+            <ul id="main-nav">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+            </ul>
+        </nav>
+        <a href="../contact.html" class="cta-button">Get a Quote</a>
+        <button class="menu-toggle">☰</button>
+    </header>
+
+    <section class="hero">
+        <h1>Our Success Stories</h1>
+        <p>See How We’ve Elevated Brands with Personalized Water</p>
+    </section>
+
+    <section class="success-stories-overview">
+        <h2>Featured Success Stories</h2>
+        <div class="grid" id="success-stories-grid"></div>
+    </section>
+
+    <footer>
+        <p>© 2023 Thrust Beverages. All rights reserved.</p>
+        <ul>
+            <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="../terms-of-service.html">Terms of Service</a></li>
+        </ul>
+        <ul class="social-media">
+            <li><a href="#"><img src="https://placehold.co/20x20" alt="Facebook"></a></li>
+            <li><a href="#"><img src="https://placehold.co/20x20" alt="Twitter"></a></li>
+            <li><a href="#"><img src="https://placehold.co/20x20" alt="Instagram"></a></li>
+        </ul>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.getElementById('main-nav').classList.toggle('active');
+        });
+
+        // 2D array of success stories [clientName, description, thumbnail, caseStudyLink]
+        const successStories = [
+            [
+                "Luxury Resort Partnership",
+                "We created custom-designed water bottles that enhanced the guest experience at a 5-star resort.",
+                "https://placehold.co/600x400",
+                "case-study-1.html"
+            ],
+            [
+                "Fine Dining Restaurant Branding",
+                "Our personalized bottles became a centerpiece for a renowned restaurant’s branding strategy.",
+                "https://placehold.co/600x400",
+                "case-study-2.html"
+            ],
+            [
+                "Beachfront Hotel Collaboration",
+                "Our eco-friendly bottles aligned with the hotel’s sustainability goals, delighting guests.",
+                "https://placehold.co/600x400",
+                "case-study-3.html"
+            ],
+            [
+                "Upscale Cafe Branding",
+                "Custom bottles added a unique touch to the cafe’s brand, impressing customers.",
+                "https://placehold.co/600x400",
+                "case-study-4.html"
+            ],
+        ];
+
+        // Render success stories dynamically
+        const grid = document.getElementById('success-stories-grid');
+        successStories.forEach(([clientName, description, thumbnail, caseStudyLink]) => {
+            const card = document.createElement('div');
+            card.className = 'story-card';
+            card.innerHTML = `
+                <img src="${thumbnail}" alt="${clientName} Bottles">
+                <h3>${clientName}</h3>
+                <p>${description}</p>
+                <a href="${caseStudyLink}">Read Case Study</a>
+            `;
+            grid.appendChild(card);
+        });
+    </script>
+</body>
+</html>
