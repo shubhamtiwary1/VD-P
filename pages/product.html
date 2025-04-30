@@ -5,20 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Products - Thrust Beverages</title>
     <link rel="stylesheet" href="../css/product.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
   <body>
     <header>
-      <img src="https://placehold.co/150x50" alt="Thrust Beverages Logo" />
-      <nav>
-        <ul id="main-nav">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="partner.html">Success Stories</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="about-us.html">About Us</a></li>
-        </ul>
-      </nav>
-      <a href="contact.html" class="cta-button">Get a Quote</a>
-      <button class="menu-toggle">☰</button>
+      <div class="container">
+        <div class="header-content">
+          <!-- <a href="#" class="logo">Thrust<span>Beverages</span></a> -->
+          <h1 class="logo">Thrust<span>Beverages</span></h1>
+          <nav>
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="product.html">Products</a></li>
+              <li><a href="partner.html">Success Stories</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="#foot">Contact</a></li>
+              <li><a href="about-us.html">About Us</a></li>
+            </ul>
+          </nav>
+          <a href="#" class="btn">Get a Quote</a>
+        </div>
+      </div>
     </header>
 
     <section class="hero">
@@ -95,44 +104,81 @@
         Make your Pacific water bottles unique to your brand with our
         customization services.
       </p>
-      <a href="services.html" class="cta-button"
-        >Learn More About Customization</a
-      >
+      <a href="services.html" class="btn">Learn More About Customization</a>
     </section>
 
     <section class="cta-section">
       <h2>Order Pacific Today</h2>
       <p>Contact us to place your order or inquire about our products.</p>
-      <a href="contact.html" class="cta-button">Get in Touch</a>
+      <a href="contact.html" class="btn">Get in Touch</a>
     </section>
 
-    <footer>
-        <p>© 2023 Thrust Beverages. All rights reserved.</p>
-        <ul>
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            <li><a href="terms-of-service.html">Terms of Service</a></li>
-        </ul>
-        <!-- <ul class="social-media">
-            <li><a href="#"><img src="https://placehold.co/20x20" alt="Facebook"></a></li>
-            <li><a href="#"><img src="https://placehold.co/20x20" alt="Twitter"></a></li>
-            <li><a href="#"><img src="https://placehold.co/20x20" alt="Instagram"></a></li>
-        </ul> -->
-        <nav>
+    <!-- Footer -->
+    <footer id="foot">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <div class="footer-logo">Thrust<span>Beverages</span></div>
+            <p>Contact Us :</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a
+                href="https://x.com/thrustbeverages?s=21&t=4RnbzbRfbuKlWGf6XrnKmA"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/thrustbeverages.in/?igsh=dHZqeGh3Y2poZ3lm&utm_source=qr#"
+                target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <h3>Quick Links</h3>
             <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="partner.html">Success Stories</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="about-us.html">About Us</a></li>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="product.html">Products</a></li>
+              <li><a href="partner.html">Success Stories</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="#foot">Contact</a></li>
+              <li><a href="about-us.html">About Us</a></li>
             </ul>
-        </nav>
+          </div>
+          <div class="footer-links">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="#">Custom Branding</a></li>
+              <li><a href="#">Delivery Options</a></li>
+              <li><a href="#">Hospitality Solutions</a></li>
+              <li><a href="#">Event Services</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h3>Contact</h3>
+            <ul>
+              <li>
+                <a href="#"
+                  ><i class="fas fa-map-marker-alt"></i> BY PASS
+                  ROAD,JHARKHAND</a
+                >
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-phone"></i> +91 9113471554</a>
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fas fa-envelope"></i>
+                  info@thrustbeverages@gmail.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Thrust Beverages. All Rights Reserved.</p>
+        </div>
+      </div>
     </footer>
-
-    <script>
-      document
-        .querySelector(".menu-toggle")
-        .addEventListener("click", function () {
-          document.getElementById("main-nav").classList.toggle("active");
-        });
-    </script>
   </body>
 </html>

@@ -1,104 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Success Stories - Thrust Beverages</title>
     <link rel="stylesheet" href="../css/partner.css" />
-</head>
-<body>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
     <header>
-        <img src="https://placehold.co/150x50" alt="Thrust Beverages Logo">
-        <nav>
-            <ul id="main-nav">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="product.html">Products</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="about-us.html">About Us</a></li>
+      <div class="container">
+        <div class="header-content">
+          <!-- <a href="#" class="logo">Thrust<span>Beverages</span></a> -->
+          <h1 class="logo">Thrust<span>Beverages</span></h1>
+          <nav>
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="product.html">Products</a></li>
+              <li><a href="partner.html">Success Stories</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="#foot">Contact</a></li>
+              <li><a href="about-us.html">About Us</a></li>
             </ul>
-        </nav>
-        <a href="../contact.html" class="cta-button">Get a Quote</a>
-        <button class="menu-toggle">☰</button>
+          </nav>
+          <a href="#" class="btn">Get a Quote</a>
+        </div>
+      </div>
     </header>
 
     <section class="hero">
-        <h1>Our Success Stories</h1>
-        <p>See How We’ve Elevated Brands with Personalized Water</p>
+      <h1>Our Success Stories</h1>
+      <p>See How We’ve Elevated Brands with Personalized Water</p>
     </section>
 
     <section class="success-stories-overview">
-        <h2>Featured Success Stories</h2>
-        <div class="grid" id="success-stories-grid"></div>
+      <h2>Featured Success Stories</h2>
+      <div class="grid" id="success-stories-grid"></div>
     </section>
 
-    <footer>
-        <p>© 2023 Thrust Beverages. All rights reserved.</p>
-        <ul>
-            <li><a href="../privacy-policy.html">Privacy Policy</a></li>
-            <li><a href="../terms-of-service.html">Terms of Service</a></li>
-        </ul>
-        <ul class="social-media">
-            <li><a href="#"><img src="https://placehold.co/20x20" alt="Facebook"></a></li>
-            <li><a href="#"><img src="https://placehold.co/20x20" alt="Twitter"></a></li>
-            <li><a href="#"><img src="https://placehold.co/20x20" alt="Instagram"></a></li>
-        </ul>
-        <nav>
+    <!-- Footer -->
+    <footer id="foot">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <div class="footer-logo">Thrust<span>Beverages</span></div>
+            <p>Contact Us :</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a
+                href="https://x.com/thrustbeverages?s=21&t=4RnbzbRfbuKlWGf6XrnKmA"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/thrustbeverages.in/?igsh=dHZqeGh3Y2poZ3lm&utm_source=qr#"
+                target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <h3>Quick Links</h3>
             <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="product.html">Products</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="about-us.html">About Us</a></li>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Success Stories</a></li>
+              <li><a href="#">About Us</a></li>
             </ul>
-        </nav>
+          </div>
+          <div class="footer-links">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="product.html">Products</a></li>
+              <li><a href="partner.html">Success Stories</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="#foot">Contact</a></li>
+              <li><a href="about-us.html">About Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h3>Contact</h3>
+            <ul>
+              <li>
+                <a href="#"
+                  ><i class="fas fa-map-marker-alt"></i> BY PASS
+                  ROAD,JHARKHAND</a
+                >
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-phone"></i> +91 9113471554</a>
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fas fa-envelope"></i>
+                  info@thrustbeverages@gmail.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Thrust Beverages. All Rights Reserved.</p>
+        </div>
+      </div>
     </footer>
 
     <script>
-        // Mobile menu toggle
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.getElementById('main-nav').classList.toggle('active');
-        });
+      // 2D array of success stories [clientName, description, thumbnail, caseStudyLink]
+      const successStories = [
+        [
+          "Luxury Resort Partnership",
+          "We created custom-designed water bottles that enhanced the guest experience at a 5-star resort.",
+          "https://placehold.co/600x400",
+          "case-study-1.html",
+        ],
+        [
+          "Fine Dining Restaurant Branding",
+          "Our personalized bottles became a centerpiece for a renowned restaurant’s branding strategy.",
+          "https://placehold.co/600x400",
+          "case-study-2.html",
+        ],
+        [
+          "Beachfront Hotel Collaboration",
+          "Our eco-friendly bottles aligned with the hotel’s sustainability goals, delighting guests.",
+          "https://placehold.co/600x400",
+          "case-study-3.html",
+        ],
+        [
+          "Upscale Cafe Branding",
+          "Custom bottles added a unique touch to the cafe’s brand, impressing customers.",
+          "https://placehold.co/600x400",
+          "case-study-4.html",
+        ],
+      ];
 
-        // 2D array of success stories [clientName, description, thumbnail, caseStudyLink]
-        const successStories = [
-            [
-                "Luxury Resort Partnership",
-                "We created custom-designed water bottles that enhanced the guest experience at a 5-star resort.",
-                "https://placehold.co/600x400",
-                "case-study-1.html"
-            ],
-            [
-                "Fine Dining Restaurant Branding",
-                "Our personalized bottles became a centerpiece for a renowned restaurant’s branding strategy.",
-                "https://placehold.co/600x400",
-                "case-study-2.html"
-            ],
-            [
-                "Beachfront Hotel Collaboration",
-                "Our eco-friendly bottles aligned with the hotel’s sustainability goals, delighting guests.",
-                "https://placehold.co/600x400",
-                "case-study-3.html"
-            ],
-            [
-                "Upscale Cafe Branding",
-                "Custom bottles added a unique touch to the cafe’s brand, impressing customers.",
-                "https://placehold.co/600x400",
-                "case-study-4.html"
-            ],
-        ];
-
-        // Render success stories dynamically
-        const grid = document.getElementById('success-stories-grid');
-        successStories.forEach(([clientName, description, thumbnail, caseStudyLink]) => {
-            const card = document.createElement('div');
-            card.className = 'story-card';
-            card.innerHTML = `
+      // Render success stories dynamically
+      const grid = document.getElementById("success-stories-grid");
+      successStories.forEach(
+        ([clientName, description, thumbnail, caseStudyLink]) => {
+          const card = document.createElement("div");
+          card.className = "story-card";
+          card.innerHTML = `
                 <img src="${thumbnail}" alt="${clientName} Bottles">
                 <h3>${clientName}</h3>
                 <p>${description}</p>
                 <a href="${caseStudyLink}">Read Case Study</a>
             `;
-            grid.appendChild(card);
-        });
+          grid.appendChild(card);
+        }
+      );
     </script>
-</body>
+  </body>
 </html>
